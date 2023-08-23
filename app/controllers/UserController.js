@@ -19,7 +19,7 @@ export class UserController {
 
 
     drawProducts() {
-        console.log('daring')
+
         const products = AppState.products
         let listContent = ''
         products.forEach(p => listContent += p.cardTemplate)
