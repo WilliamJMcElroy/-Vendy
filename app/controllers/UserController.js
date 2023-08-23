@@ -6,6 +6,7 @@ export class UserController {
 
     constructor() {
         this.drawProducts()
+        console.log('user controller loaded')
 
     }
 

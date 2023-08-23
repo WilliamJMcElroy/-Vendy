@@ -1,6 +1,11 @@
 import { AppState } from "../AppState.js"
 
-class ServiceProducts {
-    money += .25
+class serviceProducts {
+
+    collectMoney() {
+        AppState.money++
+    }
+
+    export const serviceProducts = new serviceProducts()
 }
 
