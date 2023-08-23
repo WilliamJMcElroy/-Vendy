@@ -1,6 +1,7 @@
 import { AppState } from "../AppState.js";
 import { Product } from "../models/Product.js";
-import { setHTML } from "../utils/Writer.js";
+import { setHTML, setText } from "../utils/Writer.js";
+import { serviceProducts } from "../services/ProductService.js";
 
 export class UserController {
 
@@ -8,7 +9,14 @@ export class UserController {
         this.drawProducts()
         console.log('user controller loaded')
 
+
+        AppState.on(AppState.money, this.drawMoney)
     }
+
+    drawMoney() {
+        setText('cash', AppState.money)
+    }
+
 
     drawProducts() {
         console.log('daring')
@@ -19,7 +27,7 @@ export class UserController {
     }
 
     addQuarter() {
-
+        serviceProducts.collectMoney()
         console.log('added quarter')
     }
 }

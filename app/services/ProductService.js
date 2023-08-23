@@ -3,7 +3,7 @@ import { AppState } from "../AppState.js"
 class ServiceProducts {
 
     collectMoney() {
-        AppState.money++
+        AppState.money += .25
     }
 
 }
