@@ -11,7 +11,7 @@ export class Product {
         <div class="col-12 col-md-3 justify-content-center">
         <p> ${this.name}</p>
             <img class="resizeImg" src="${this.picture}" class="img-fluid/>, ${this.price} ${this.quantity}
-            <button class="btn col-12" onclick="app.UserController.addQuarter()">Add Quarter</button>
+            <button class="btn col-12" role="button" onclick="app.UserController.addQuarter()">Add Quarter</button>
             </div>
     `
     }
